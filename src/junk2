@@ -1,0 +1,50 @@
+//productdao implementation
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductDAOImpl implements ProductDAO {
+
+    private static final String DB_URL = "jdbc:postgresql://your_host:port/your_database";
+    private static final String DB_USER = "your_username";
+    private static final String DB_PASSWORD = "your_password";
+
+    @Override
+    public Product createProduct(Product product) throws SQLException {
+        // Implement using prepared statements and database connection logic
+        return product; // Replace with actual implementation
+    }
+
+    @Override
+    public Product getProductById(int productId) throws SQLException {
+        // Implement using prepared statements and database connection logic
+        return null; // Replace with actual implementation
+    }
+
+    @Override
+    public List<Product> getAllProducts() throws SQLException {
+        // Implement using prepared statements and database connection logic
+        return new ArrayList<>(); // Replace with actual implementation
+    }
+
+    @Override
+    public List<Product> getProductsBySellerId(int sellerId) throws SQLException {
+        // Implement using prepared statements and database connection logic
+        return new ArrayList<>(); // Replace with actual implementation
+    }
+
+    @Override
+    public void updateProduct(Product product) throws SQLException {
+        // Implement using prepared statements and database connection logic
+    }
+
+    @Override
+    public void deleteProduct(int productId) throws SQLException {
+        // Implement using prepared statements and database connection logic
+    }
+
+    // Helper method to establish database connection
+    private Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+    }
+}
